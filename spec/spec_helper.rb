@@ -1,4 +1,8 @@
 require "bundler/setup"
+
+require 'simplecov'
+SimpleCov.start
+
 require "xmen_danger_room"
 
 RSpec.configure do |config|
