@@ -28,4 +28,11 @@ RSpec.describe XmenDangerRoom::XmenMember do
       expect(member.wolverine?).to be_falsy
     end
   end
+
+  context 'when member is under aged' do
+    it 'returns that cant fight when 16' do
+      member = described_class.new(name: 'Rogue', age: 16)
+      expect(member.old_enough_to_fight?).to be_falsy
+    end
+  end
 end
