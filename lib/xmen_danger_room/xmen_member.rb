@@ -7,7 +7,7 @@ module XmenDangerRoom
     end
 
     def wolverine?
-      @name == 'Wolverine'
+      name.eql? 'Wolverine'
     end
   end
 end

@@ -14,4 +14,12 @@ RSpec.describe XmenDangerRoom::XmenMember do
       expect(member.wolverine?).to be_truthy
     end
   end
+
+  context 'when memeber is not Wolverine' do
+    subject(:member) { described_class.new(name: 'Professor X') }
+
+    it 'returns that member is not Wolverine' do
+      expect(member.wolverine?).to be_falsy
+    end
+  end
 end
