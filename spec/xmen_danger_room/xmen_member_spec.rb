@@ -9,6 +9,26 @@ RSpec.describe XmenDangerRoom::XmenMember do
     expect(member.name).to eq 'Wolverine'
   end
 
+  context 'when it has a VALID email' do
+    subject(:member) do
+      described_class.new(name: 'Wolverine', age: 2000, email: 'wolves@xmen.com')
+    end
+
+    it 'returns ok' do
+      expect(member.valid_email?).to be_truthy
+    end
+  end
+
+  context 'when it has a INVALID email' do
+    subject(:member) do
+      described_class.new(name: 'Wolverine', age: 2000, email: 'wolves@xmen-member.com')
+    end
+
+    it 'returns false' do
+      expect(member.valid_email?).to be_falsy
+    end
+  end
+
   context 'when member is Wolverine' do
     subject(:member) do
       described_class.new(name: 'Wolverine', age: 2000, email: 'wolves@xmen.com')
