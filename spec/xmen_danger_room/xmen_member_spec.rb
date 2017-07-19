@@ -34,5 +34,27 @@ RSpec.describe XmenDangerRoom::XmenMember do
       member = described_class.new(name: 'Rogue', age: 16)
       expect(member.old_enough_to_fight?).to be_falsy
     end
+
+    it 'returns that cant fight when 17' do
+      member = described_class.new(name: 'Rogue', age: 17)
+      expect(member.old_enough_to_fight?).to be_falsy
+    end
+  end
+
+  context 'when old enough to fight' do
+    it 'returns that can fight with 18' do
+      member = described_class.new(name: 'Rogue', age: 18)
+      expect(member.old_enough_to_fight?).to be_truthy
+    end
+
+    it 'returns that can fight with 19' do
+      member = described_class.new(name: 'Rogue', age: 19)
+      expect(member.old_enough_to_fight?).to be_truthy
+    end
+
+    it 'returns that can fight with over 20' do
+      member = described_class.new(name: 'Rogue', age: 20)
+      expect(member.old_enough_to_fight?).to be_truthy
+    end
   end
 end
