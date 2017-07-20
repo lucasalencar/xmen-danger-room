@@ -6,6 +6,8 @@ This is an example project for mutation testing technique. This gem uses
 The idea is to make a software that manages Xmen members for fighting
 villans.
 
+[Slides.](https://speakerdeck.com/lucasandre/melhorando-a-qualidade-derrotando-um-mutante-por-vez)
+
 ## Usage
 
 The project depends on Ruby to work.
