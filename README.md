@@ -1,7 +1,7 @@
 # Xmen Danger Room (Mutation Test Example)
 
 This is an example project for mutation testing technique. This gem uses
-`mutest-rspec` to run the mutation tests.
+[`mutest-rspec`](https://github.com/backus/mutest) to run the mutation tests.
 
 The idea is to make a software that manages Xmen members for fighting
 villans.
